@@ -2,7 +2,7 @@ from varasto import Varasto
 
 
 def main():
-    mehua = Varasto(100.0)
+    mehua = Varasto(200.0)
     olutta = Varasto(100.0, 20.2)
 
     print("Luonnin jälkeen:")

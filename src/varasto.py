@@ -9,22 +9,22 @@ class Varasto:
     def lisaa_varastoon(self, maara):
         if maara < 0:
             return
-
-        self.saldo = self.saldo + maara if maara <= self.paljonko_mahtuu() else self.tilavuus
+        if maara <= self.paljonko_mahtuu():
+            self.saldo = self.saldo + maara
+        else:
+            self.saldo = self.tilavuus
 
     def ota_varastosta(self, maara):
         if maara < 0:
             return 0.0
-        else:
-            if maara > self.saldo:
-                if self.saldo == 0.0:
-                    return 0
-                else:
-                    kaikki_mita_voidaan = self.saldo
-                    self.saldo = 0.0
-                    return kaikki_mita_voidaan
+        if maara > self.saldo:
+            kaikki_mita_voidaan = self.saldo
+            self.saldo = 0.0
+
+            return kaikki_mita_voidaan
 
         self.saldo = self.saldo - maara
+
         return maara
 
     def __str__(self):

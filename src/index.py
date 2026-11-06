@@ -45,14 +45,13 @@ def testaa_lisaaminen(olutta, mehua):
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")
 
-def testaa_oluen_ottaminen(olutta):
+def testaa_ottaminen(olutta, mehua):
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
     saatiin = olutta.ota_varastosta(1000.0)
     print(f"saatiin {saatiin}")
     print(f"Olutvarasto: {olutta}")
 
-def testaa_mehun_ottaminen(mehua):
     print(f"Mehuvarasto: {mehua}")
     print("mehua.otaVarastosta(-32.9)")
     saatiin = mehua.ota_varastosta(-32.9)
@@ -68,8 +67,7 @@ def main():
     testaa_virhetilanteet()
 
     testaa_lisaaminen(olutta, mehua)
-    testaa_oluen_ottaminen(olutta)
-    testaa_mehun_ottaminen(mehua)
+    testaa_ottaminen(olutta)
 
 if __name__ == "__main__":
     main()

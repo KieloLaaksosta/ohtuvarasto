@@ -53,7 +53,7 @@ def testaa_oluen_ottaminen(olutta):
     print(f"Olutvarasto: {olutta}")
 
 def testaa_mehun_ottaminen(mehua):
-    print(f"Mehuvarasto: {mehua} PIIIIIIIIITKÄÄÄÄÄÄÄ TEKSTIIIII YHDELLÄÄÄÄÄ RIIIIVILLÄÄÄÄÄ !!!!!! RIKKOO PYLINTIN")
+    print(f"Mehuvarasto: {mehua}")
     print("mehua.otaVarastosta(-32.9)")
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
